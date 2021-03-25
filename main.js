@@ -1,28 +1,19 @@
-/* var myArray = [
-    {'date':'04-01-2021', 'vehicle':'Bear I', 'cost':'$0',},
-    {'date':'04-03-2021', 'vehicle':'Orca I', 'cost':'$0'},
-    {'date':'04-05-2021', 'vehicle':'Moose I', 'cost':'$0'},
-    {'date':'04-10-2021', 'vehicle':'Bear II', 'cost':'$0'},
-    {'date':'04-12-2021', 'vehicle':'Bumblebee I', 'cost':'$0'},
-    {'date':'04-13-2021', 'vehicle':'Bumblebee II', 'cost':'$0'},
-    {'date':'04-14-2021', 'vehicle':'Bumblebee III', 'cost':'$0'},
-    {'date':'04-15-2021', 'vehicle':'Bumblebee IV', 'cost':'$0'},
-    {'date':'04-20-2021', 'vehicle':'Orca II', 'cost':'$0'},
-    {'date':'04-23-2021', 'vehicle':'Moose II', 'cost':'$0'},
-    {'date':'04-30-2021', 'vehicle':'Bear III', 'cost':'$0'},
-]
+var myArray = []
 
-*/
+buildTable(myArray)
 
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.open("GET", "data.json", false);
-xmlhttp.send(null);
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var myArray = JSON.parse(this.responseText);
-        console.log(myArray);
+$.ajax({
+    method:'GET',
+    //use the following line if running on a web server
+    url:'data.json',
+    //use the following line if running locally
+    //url:'https://api.jsonbin.io/b/605bd7adb87f462d7aa2ba7c/4',
+    success:function(response){
+        myArray = response.flights
+        buildTable(myArray)
+        console.log(myArray)
     }
-}
+})
 
 //sorting function
 $('th').on('click', function(){
