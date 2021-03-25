@@ -40,7 +40,7 @@ buildTable(myArray)
 //searching function
 $('#search-input').on('keyup', function(){
     var value = $(this).val()
-    console.log("Value:", value)
+    //console.log("Value:", value)
 
     var data = searchTable(value, myArray)
     buildTable(data)
@@ -61,6 +61,7 @@ function searchTable(value, data){
     return filteredData
 }
 
+
 //build table from JSON data
 function buildTable(data){
     var table = document.getElementById('myTable')
@@ -70,8 +71,38 @@ function buildTable(data){
     for (var i = 0; i < data.length; i++){
         var row = `<tr>
                         <td>${data[i].date}</td>
-                        <td>${data[i].vehicle}</td>
+                        <td> <button onclick="buildModal(myArray, this.innerText);" type="button" class="btn" data-toggle="modal" data-target="#theModal">${data[i].vehicle}</button></td>
                 </tr>`
         table.innerHTML += row
     }
+}
+
+function buildModal(table, vehicle){
+    var modTable = document.getElementById('modalTable')
+    
+    modTable.innerHTML = ''
+
+    for (var i = 0; i < table.length; i++){
+        if(vehicle === table[i].vehicle){
+            var index = i
+        }
+    }
+    
+    for (var x in table[index]) {
+        var newRow = `<tr>
+            <td>${capitalizeWords(x)}</td>    
+            <td>${table[index][x]}</td> 
+        </tr>`
+        modTable.innerHTML += newRow
+    }
+}
+
+function capitalizeWords(input){
+    const sentence = input
+    const words = sentence.split(" ");
+
+    for (var i = 0; i < words.length; i++){
+        words[i] = words[i][0].toUpperCase() + words[i].substr(1)
+    }
+    return words.join(" ");
 }

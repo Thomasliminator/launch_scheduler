@@ -1,15 +1,15 @@
 {
     "flights": [
-        {"date":"04-01-2021", "vehicle":"Bear I", "cost":"$0"},
-        {"date":"04-03-2021", "vehicle":"Orca I", "cost":"$0"},
-        {"date":"04-05-2021", "vehicle":"Moose I", "cost":"$0"},
-        {"date":"04-10-2021", "vehicle":"Bear II", "cost":"$0"},
-        {"date":"04-12-2021", "vehicle":"Bumblebee I", "cost":"$0"},
-        {"date":"04-13-2021", "vehicle":"Bumblebee II", "cost":"$0"},
-        {"date":"04-14-2021", "vehicle":"Bumblebee III", "cost":"$0"},
-        {"date":"04-15-2021", "vehicle":"Bumblebee IV", "cost":"$0"},
-        {"date":"04-20-2021", "vehicle":"Orca II", "cost":"$0"},
-        {"date":"04-23-2021", "vehicle":"Moose II", "cost":"$0"},
-        {"date":"04-30-2021", "vehicle":"Bear III", "cost":"$0"}
+        {"date":"04-01-2021", "vehicle":"Bear I", "additional cost":"$0", "launch manager": "Kyle Booth", "launch time": "1958 GMT"},
+        {"date":"04-03-2021", "vehicle":"Orca I", "additional cost":"$0", "launch manager": "Kyle Booth", "launch time": "0622 GMT"},
+        {"date":"04-05-2021", "vehicle":"Moose I", "additional cost":"$0", "launch manager": "Thomas Lim", "launch time": "0827 GMT"},
+        {"date":"04-10-2021", "vehicle":"Bear II", "additional cost":"$0", "launch manager": "Jeremy Frank", "launch time": "1344 GMT"},
+        {"date":"04-12-2021", "vehicle":"Bumblebee I", "additional cost":"$0", "launch manager": "Kyle Booth", "launch time": "1712 GMT"},
+        {"date":"04-13-2021", "vehicle":"Bumblebee II", "additional cost":"$0", "launch manager": "Thomas Lim", "launch time": "0730 GMT"},
+        {"date":"04-14-2021", "vehicle":"Bumblebee III", "additional cost":"$0", "launch manager": "Jeremy Frank", "launch time": "0701 GMT"},
+        {"date":"04-15-2021", "vehicle":"Bumblebee IV", "additional cost":"$0", "launch manager": "Kyle Booth", "launch time": "1111 GMT"},
+        {"date":"04-20-2021", "vehicle":"Orca II", "additional cost":"$0", "launch manager": "Jeremy Frank", "launch time": "1012 GMT"},
+        {"date":"04-23-2021", "vehicle":"Moose II", "additional cost":"$0", "launch manager": "Thomas Lim", "launch time": "0401 GMT"},
+        {"date":"04-30-2021", "vehicle":"Bear III", "additional cost":"$0", "launch manager": "Thomas Lim", "launch time": "0555 GMT"}
     ]
 }
