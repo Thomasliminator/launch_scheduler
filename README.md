@@ -15,7 +15,7 @@ The JSON data can only be read into the tool from a local file if running a loca
 2. Go to a web browser and go to `localhost:8888` to launch the webpage.
 
 A version of the tool is also hosted through my github account.
-[Link](thomasliminator.github.io/launch/index.html)
+[link](http://thomasliminator.github.io/launch/)
 
 ### Assumptions
 1. The months of March and May do not have any launches scheduled. (e.g. a Moose-type launch can be scheduled on April 1 or April 30 with no issues)
