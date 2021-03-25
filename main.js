@@ -71,7 +71,7 @@ function buildTable(data){
     for (var i = 0; i < data.length; i++){
         var row = `<tr>
                         <td>${data[i].date}</td>
-                        <td> <button onclick="buildModal(myArray, this.innerText);" type="button" class="btn" data-toggle="modal" data-target="#theModal">${data[i].vehicle}</button></td>
+                        <td> <button onclick="buildModal(myArray, this.innerText);" type="button" class="btn btn-nopad" data-toggle="modal" data-target="#theModal">${data[i].vehicle}</button></td>
                 </tr>`
         table.innerHTML += row
     }
