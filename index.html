@@ -30,24 +30,28 @@
 				<div class="card card-body">
 					<text>Search by date or vehicle name:</text>
 					<input id="search-input" class="form-control" type="text">
-
 				</div>
 			</div>
 		</div>
 
-		<!-- table header/body -->
-		<table class="table table-striped">
-			<tr class="bg-primary">
-				<th data-column="date" data-order="desc">Date &#9650</th>
-				<th data-column="vehicle" data-order="desc">Vehicle &#9650</th>
-				<!-- <th>Additional Cost</th> -->
-			</tr>
-
-			<tbody id="myTable">
-				
-			</tbody>
-		</table>
+		<div class="container-fluid">
+			<br>
+			<h3 id="texthere">Total Delay Cost : $</h3>
 		
+			<!-- table header/body -->
+			<table class="table table-striped" id="sumTable">
+				<tr class="bg-primary">
+					<th data-column="date" data-order="desc">Date (Click to Sort) &#9650</th>
+					<th data-column="vehicle" data-order="desc">Vehicle (Click to Sort) &#9650</th>
+					<th data-column="cost" data-order="desc">Delay Cost (Click to Sort) &#9650</th>
+					<th data-column="ignore">Click for Additonal Information</th>
+				</tr>
+				
+				<tbody id="myTable">
+					
+				</tbody>
+			</table>
+		</div>
 		<!-- Modal -->
 		<div class="modal fade" id="theModal" tabindex="-1" role="dialog" aria-labelledby="theModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">

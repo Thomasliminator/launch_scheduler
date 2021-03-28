@@ -1,22 +1,24 @@
 var myArray = []
 
-buildTable(myArray)
-
 $.ajax({
     method:'GET',
-    //use the following line if running on a web server
+    //use the following line if running on a local server
     url:'data.json',
-    //use the following line if running locally
-    //url:'https://api.jsonbin.io/b/605bd7adb87f462d7aa2ba7c/4',
+    //use the following line if running without a server
+    //url:'https://api.jsonbin.io/b/605bd7adb87f462d7aa2ba7c/6',
     success:function(response){
         myArray = response.flights
         buildTable(myArray)
+        findSum(myArray)
         console.log(myArray)
     }
 })
 
 //sorting function
 $('th').on('click', function(){
+    if ($(this).data('column') == 'ignore'){
+        return
+    }
     var column = $(this).data('column')
     var order = $(this).data('order')
     var text = $(this).html()
@@ -35,7 +37,18 @@ $('th').on('click', function(){
     buildTable(myArray)
 })
 
-buildTable(myArray)
+function findSum(data){
+    sum = 0
+    for (var i = 0; i < data.length; i++){
+        sum += isNaN(data[i].cost.substring(1)) ? 0 : parseFloat(data[i].cost.substring(1));
+        //console.log(data[i].cost.substring(1))
+    }
+
+    //console.log(sum)
+
+    var output = document.getElementById('texthere')
+    output.innerHTML += sum;
+}
 
 //searching function
 $('#search-input').on('keyup', function(){
@@ -71,7 +84,9 @@ function buildTable(data){
     for (var i = 0; i < data.length; i++){
         var row = `<tr>
                         <td>${data[i].date}</td>
-                        <td> <button onclick="buildModal(myArray, this.innerText);" type="button" class="btn btn-nopad" data-toggle="modal" data-target="#theModal">${data[i].vehicle}</button></td>
+                        <td>${data[i].vehicle}</td>
+                        <td>${data[i].cost}</td>
+                        <td> <button onclick="buildModal(myArray, this.innerText);" type="button" class="btn btn-nopad" data-toggle="modal" data-target="#theModal"><u>More Info</u></button></td>
                 </tr>`
         table.innerHTML += row
     }
