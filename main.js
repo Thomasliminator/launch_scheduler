@@ -84,9 +84,8 @@ function buildTable(data){
     for (var i = 0; i < data.length; i++){
         var row = `<tr>
                         <td>${data[i].date}</td>
-                        <td>${data[i].vehicle}</td>
+                        <td> <button onclick="buildModal(myArray, this.innerText);" type="button" class="btn btn-nopad" data-toggle="modal" data-target="#theModal"><u>${data[i].vehicle}</u></button></td>
                         <td>${data[i].cost}</td>
-                        <td> <button onclick="buildModal(myArray, this.innerText);" type="button" class="btn btn-nopad" data-toggle="modal" data-target="#theModal"><u>More Info</u></button></td>
                 </tr>`
         table.innerHTML += row
     }
@@ -102,7 +101,6 @@ function buildModal(table, vehicle){
             var index = i
         }
     }
-    
     for (var x in table[index]) {
         var newRow = `<tr>
             <td>${capitalizeWords(x)}</td>    

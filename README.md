@@ -13,8 +13,8 @@ NASA Summer Internship Programming Challenge
 ### Tool Functionality:
 The tool displays all of the April 2021 launches on the front page.
 There is a search bar where the user can search for launches by date or vehicle name. 
-The date, vehicle, and additional cost columns are sortable by clicking the column header.
-By clicking the "more info", additional information is shown about the launch.
+The date, vehicle, and delay cost columns are sortable by clicking the column header.
+By clicking the vehicle name (e.g. Bear I), additional information is shown about the launch.
 - I added some dummy information that I thought might be applicable to a real tool.
 
 ### How to Run the Code (3 ways):
