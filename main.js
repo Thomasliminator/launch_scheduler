@@ -27,18 +27,19 @@ $('th').on('click', function(){
     if ($(this).data('column') == 'date'){
         header.style.background = "navy"
         header2.style.background = "#007bff"
-        header3.style.background = "007bff"
+        header3.style.background = "#007bff"
     }
-    else if ($(this).data('column') == 'vehicle'){
+    if ($(this).data('column') == 'vehicle'){
         header.style.background = "#007bff"
         header2.style.background = "navy"
-        header3.style.background = "007bff"
+        header3.style.background = "#007bff"
     }
-    else if ($(this).data('column') == 'cost'){
+    if ($(this).data('column') == 'cost'){
         header.style.background = "#007bff"
         header2.style.background = "#007bff"
         header3.style.background = "navy"
     }
+    
 
     var column = $(this).data('column')
     var order = $(this).data('order')
