@@ -23,7 +23,7 @@ The tool can be found at the following [link](http://thomasliminator.github.io/l
 
 #### Option 2: Running it locally on a browser through an http-server
 The JSON data can only be read into the tool from a **local** file if running a local server. To run the program without runnign a server, see option 3. 
-1. Type the following command into the terminal: `$python3 -m http.server 8888`.
+1. In the launch_scheduler directory, type the following command into the terminal: `$python3 -m http.server 8888`.
 2. Go to a web browser and go to `localhost:8888` to launch the webpage.
 
 #### Option 3: Running it locally on a browser without a server (change required)
